@@ -16,11 +16,37 @@
   </route>
 
   -->
-
+  <style>
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 8%;
+    }
+    #card {
+      display: flex;
+      max-width: fit-content;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.411);
+      background: #fff;
+      border-radius: 30px;
+      padding: 2%;
+    }
+    #divider {
+      margin-left: 4%;
+    }
+  </style>
   <main>
     <route default>
+      <div class=contenedor>
+        <div id="card">
       <application name="@talleres/app1"></application>
+      <hr dir="auto" id="divider"/>
       <application name="@talleres/app2r"></application>
+      </div>
+      </div>
+    </route>
+    <route path="checkout">
+      <application name="@talleres/app3"></application>
     </route>
   </main>
 </single-spa-router>
